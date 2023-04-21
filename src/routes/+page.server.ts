@@ -1,5 +1,6 @@
 import type { PageServerLoad } from "./$types"
 import directus from "$lib/directus"
+import { error } from "@sveltejs/kit";
 
 export const load: PageServerLoad = async () => {
 
@@ -18,7 +19,7 @@ export const load: PageServerLoad = async () => {
 	const page = pages?.data?.[0];
 
 	if (!page) {
-		throw new Error("Page not found in cms.")
+		throw error(404, "Page not found in cms.")
 	}
 
 
