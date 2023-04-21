@@ -17,6 +17,7 @@ specifiers:
   eslint-plugin-svelte3: ^4.0.0
   highlight.js: ^11.7.0
   markdown-it: ^13.0.1
+  pnpm: ^8.3.1
   postcss: ^8.4.14
   postcss-load-config: ^4.0.1
   prettier: ^2.8.0
@@ -54,6 +55,7 @@ devDependencies:
   eslint: 8.38.0
   eslint-config-prettier: 8.8.0_eslint@8.38.0
   eslint-plugin-svelte3: 4.0.0_a4ckjr7darsrglbip3svgxgxc4
+  pnpm: 8.3.1
   postcss: 8.4.23
   postcss-load-config: 4.0.1_postcss@8.4.23
   prettier: 2.8.7
@@ -1645,6 +1647,12 @@ packages:
   /pirates/4.0.5:
     resolution: {integrity: sha512-8V9+HQPupnaXMA23c5hvl69zXvTwTzyAYasnkb0Tts4XvO4CliqONMOnvlq26rkhLC3nWDFBJf73LU1e1VZLaQ==}
     engines: {node: '>= 6'}
+
+  /pnpm/8.3.1:
+    resolution: {integrity: sha512-0mT2ZAv08J3nz8xUdWhRW88GE89IWgPo/xZhb6acQXK2+aCikl7kT7Bg31ZcnJqOrwYXSed68xjLd/ZoSnBR8w==}
+    engines: {node: '>=16.14'}
+    hasBin: true
+    dev: true
 
   /postcss-import/14.1.0_postcss@8.4.23:
     resolution: {integrity: sha512-flwI+Vgm4SElObFVPpTIT7SU7R3qk2L7PyduMcokiaVKuWv9d/U+Gm/QAd8NDLuykTWTkcrjOeD2Pp1rMeBTGw==}
