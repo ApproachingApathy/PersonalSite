@@ -1,19 +1,8 @@
 <script lang="ts">
-	import ResumeExperience from '$lib/components/ResumeExperience.svelte';
-	import Sidebar from '$lib/components/Sidebar.svelte';
-    import type { Collections } from '$lib/types';
-	import showdown from 'showdown';
+	import type { PageData } from './$types';
 
-	type ArrayElement<ArrayType extends readonly unknown[]> =
-		ArrayType extends readonly (infer ElementType)[] ? ElementType : never;
-
-	const mdConvertor = new showdown.Converter({ ghCodeBlocks: true });
-
-	export let articles: Array<Collections["articles"]> = [];
-	
-	// export let home = undefined;
-
-	let blocks = [];
+	export let data: PageData;
+	let { articles }  = data
 </script>
 
 <svelte:head>
@@ -36,7 +25,7 @@
 				{/if}
 				{#each articles as post}
 					<li class="w-full border hover:border-2">
-						<a href="blogs/{post.slug}">
+						<a href="blog/{post.slug}">
 							<div class="p-3 grid grid-flow-col gap-3 grid-cols-2">
 								<div>
 									<h2 class="text-xl font-medium">

@@ -1,11 +1,21 @@
 const config = {
 	content: ['./src/**/*.{html,js,svelte,ts}'],
+	safelist: [{
+		pattern: /hljs+/
+	}, "no-prose"],
 
 	theme: {
-		extend: {}
+		hljs: {
+			theme: "atom-one-dark"
+		},
+		extend: {
+		}
 	},
 
-	plugins: []
+	plugins: [
+		require("@tailwindcss/typography"),
+		require("tailwind-highlightjs")
+	]
 };
 
 module.exports = config;

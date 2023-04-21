@@ -3,9 +3,12 @@
 		import type { Collections } from '$lib/types';
 	
 		import { fade } from 'svelte/transition';
+	import type { PageData } from './$types';
+
+		export let data: PageData;
 	
-		export let socials: Array<Collections["socials"]> = []
-	
+		let { socials } = data;
+
 		let showPage = false;
 		setTimeout(() => {
 			showPage = true;

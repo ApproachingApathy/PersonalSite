@@ -2,11 +2,10 @@
     import type { PageData } from "./$types";
     import Sidebar from "$lib/components/Sidebar.svelte";
     import ResumeExperience from "$lib/components/ResumeExperience.svelte";
-	import showdown from 'showdown';
+	import { renderMarkdown } from "$lib/markdown";
 
-	const mdConvertor = new showdown.Converter({ ghCodeBlocks: true });
     export let data: PageData;
-	const { blocks, experiences } = data
+	const { blocks, experiences } = data;
 </script>
 
 <svelte:head>
@@ -51,7 +50,7 @@
 							</h2>
 							<div>
 								{#if block.content}
-									{@html mdConvertor.makeHtml(block.content)}
+									{@html renderMarkdown(block.content)}
 								{/if}
 							</div>
 						</div>
@@ -72,7 +71,7 @@
 								company={experience.organizationName}
 							>
 								{#if experience.content}
-									{@html mdConvertor.makeHtml(experience.content)}
+									{@html renderMarkdown(experience.content)}
 								{/if}
 							</ResumeExperience>
 						{/each}
