@@ -6,6 +6,8 @@ export const load: PageServerLoad = async () => {
 		sort: ['-dateCreated', '-sort']
 	});
 
+	console.log(articles)
+
 	return {
 		articles: articles ?? []
 	};

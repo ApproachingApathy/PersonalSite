@@ -8,7 +8,7 @@ if (typeof cmsKey !== 'string' || typeof cmsUrl !== 'string') throw Error('Missi
 
 const directus = new Directus<Collections>(cmsUrl, {
 	auth: {
-		staticToken: cmsKey
+		staticToken: cmsKey,
 	}
 });
 

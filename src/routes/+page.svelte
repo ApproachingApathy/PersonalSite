@@ -14,6 +14,7 @@
 
 <main>
 	<div class="mt-10 md:p-6 flex">
+		<a href="/blog/test">test</a>
 		<Sidebar>
 			<div class="flex justify-center py-6">
 				<div class="aspect-[3/4] max-h-80 md:max-h-72">
