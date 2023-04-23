@@ -23,8 +23,6 @@
                         </h1>
                     </div>
                 {/if}
-                <!-- Testing hard coding link -->
-                <a href="/blog/test">test</a> 
                 {#each articles as post}
                     <li class="w-full border hover:border-2">
                         <a href="/blog/{post.slug}">
