@@ -2,8 +2,8 @@
 		import '../app.postcss';
 		import type { Collections } from '$lib/types';
 	
-		import { fade } from 'svelte/transition';
-	import type { PageData } from './$types';
+		import type { PageData } from './$types';
+		import { evaluateClassName } from '$lib/client/evaluateClassName';
 
 		export let data: PageData;
 	
@@ -21,11 +21,9 @@
 </svelte:head>
 
 <div class="w-full min-h-screen md:py-24 dark:bg-zinc-900 dark:text-zinc-300">
-	{#if showPage}
 		<div
 			id="page-main"
-			class="max-w-4xl md:border shadow-md mx-auto"
-			transition:fade={{ delay: 250, duration: 300 }}
+			class={`max-w-4xl md:border shadow-md mx-auto transition-opacity duration-1000 ${evaluateClassName(showPage, "", "opacity-0")}`}
 		>
 			<header>
 				<div>
@@ -70,5 +68,4 @@
 				</aside>
 			</footer>
 		</div>
-	{/if}
 </div>
