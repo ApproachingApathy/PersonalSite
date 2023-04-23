@@ -8,6 +8,7 @@ export interface Article {
 	userUpdated: string | null;
 	dateCreated: string | null;
 	dateUpdated: string | null;
+	publishDate: string | null;
 	title: string | null;
 	slug: string;
 	description: string | null;

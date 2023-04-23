@@ -15,7 +15,7 @@
             <div>
                 <h1 class="text-3xl font-medium pb-3">Blog Posts</h1>
             </div>
-            <ul class="w-full">
+            <ul class="w-full mb-3">
                 {#if articles.length < 1}
                     <div>
                         <h1 class="text-xl">
@@ -38,8 +38,8 @@
                                 </div>
                                 <div class="flex items-end justify-end">
                                     <div>
-                                        Published on {post.dateCreated
-                                            ? new Date(post.dateCreated).toLocaleDateString('en-US', {
+                                        Published on {post.publishDate
+                                            ? new Date(post.publishDate).toLocaleDateString('en-US', {
                                                     month: 'long',
                                                     day: 'numeric'
                                               })

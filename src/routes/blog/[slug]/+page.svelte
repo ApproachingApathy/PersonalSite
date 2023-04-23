@@ -40,7 +40,7 @@
             <dd>Ephriam Henderson</dd>
             <span>&middot;</span>
             <dt class="italic">Published:</dt>
-            <dd>{article.dateCreated ? new Date(article.dateCreated).toLocaleDateString("en-US", { month: "long", day: "numeric",  year: "numeric" }) : ""}</dd>
+            <dd>{article.publishDate ? new Date(article.publishDate).toLocaleDateString("en-US", { month: "long", day: "numeric",  year: "numeric" }) : ""}</dd>
          </dl>
 		</div>
 		<hr class="dark:border-white/40"/>

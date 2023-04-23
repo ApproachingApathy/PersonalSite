@@ -13,8 +13,6 @@ export const load: PageServerLoad = async ({ params }) => {
 
 	const article = articles?.[0];
 
-	console.log(article)
-
 	if (!article) {
 		throw error(404, 'Article not found.');
 	}
