@@ -10,6 +10,11 @@ export const load: PageServerLoad = async () => {
 
 	const pages = await directus.items('pages').readByQuery({
 		fields: "*.*" as "*",
+		deep: {
+			"blocks": {
+				_sort: ["sort"]
+			}
+		},
 		filter: {
 			name: "homepage"
 		}

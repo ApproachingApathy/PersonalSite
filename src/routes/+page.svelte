@@ -48,7 +48,7 @@
 							<h2 id={block.htmlId} class="text-2xl font-medium font-condensed-sans">
 								{block.title}
 							</h2>
-							<div>
+							<div class="prose text-current prose-h1:text-xl prose-h1:font-medium prose-h2:text-lg prose-h2:font-medium">
 								{#if block.content}
 									{@html renderMarkdown(block.content)}
 								{/if}
