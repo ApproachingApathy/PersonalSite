@@ -33,7 +33,7 @@
 				</div>
 			{/if}
 		</div>
-		<div class="mt-3 prose dark:prose-invert">
+		<div class="mt-3 prose dark:prose-invert text-current">
 			<slot />
 		</div>
 	</div>
